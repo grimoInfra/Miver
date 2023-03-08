@@ -1,0 +1,44 @@
+{
+  "name": "Miver",
+  "version": "1.0.0",
+  "description": "download torrents with ease",
+  "main": "./src/main.js",
+  "repository": "https://gr",
+  "author": "Agrimo Infra LTD",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack serve --config ./build/webpack.dev.js",
+    "init-jest": "jest --init",
+    "help-jest" : "jest --help",
+    "test": "jest",
+    "compile-tests" : "webpack --config ./build/test/test.config.js"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "@types/pretty-bytes": "^5.2.0",
+    "@types/streamsaver": "^2.0.1",
+    "@types/webtorrent": "^0.109.3",
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "jsdom": "^21.1.0",
+    "material-symbols": "^0.4.6",
+    "mini-css-extract-plugin": "^2.7.2",
+    "pretty-bytes": "^6.1.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.2",
+    "tsconfig-paths-webpack-plugin": "^4.0.0",
+    "typescript": "^4.9.5",
+    "web-streams-polyfill": "^3.2.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "parse-torrent": "^11.0.7",
+    "streamsaver": "^2.0.6",
+    "webtorrent": "^2.0.14"
+  }
+}

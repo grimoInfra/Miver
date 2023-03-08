@@ -1,0 +1,37 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Agrimo Infra LTD. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.product-container {
+    height: var(--top-bar-height);
+    width: fit-content;
+    margin-left: 30px;
+}
+
+.product-container  > a.product-link-source {
+    height: inherit;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.product-container > .product-link-source > .product-logo {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('data:image/png;base64,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');
+}
+
+.product-container > .product-link-source > .product-id {
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: 550;
+    text-transform: lowercase;
+    margin-left: 8px;
+    color: var(--on-primary-theme-color);
+}
+

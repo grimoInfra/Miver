@@ -1,0 +1,22 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Agrimo Infra LTD. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.top-bar-container {
+    width: 100%;
+    height: var(--top-bar-height);
+    background-color: var(--primary-theme-color);
+    box-shadow: 0 0 8px 2px var(--primay-shadow-color);
+    transition: 0.5s;
+}
+
+.top-bar-container  > .top-bar-split-view {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: 0.5s;
+
+}

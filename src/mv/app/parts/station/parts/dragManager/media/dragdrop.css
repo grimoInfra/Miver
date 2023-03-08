@@ -1,0 +1,57 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Agrimo Infra LTD. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.drag-drop-container {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: inherit;
+}
+
+.drag-drop-container > .idle-blob-container{
+    width: 100%;
+    height: inherit;
+    position: relative;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.drag-drop-container  > .idle-blob-container > .drag-drop-description {
+    /* position: absolute; */
+    word-wrap: break-word;
+    font-family: Montserrat;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    width: 500px;
+    color: grey;
+}
+
+.drag-drop-container  > .idle-blob-container > .drag-icon-element {
+    color: #ee40409d;
+    font-size: 150pt;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    animation: WaitingMode 3s linear infinite;
+    transform: scale(1);
+}
+
+@keyframes WaitingMode {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+
+}

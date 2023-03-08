@@ -1,0 +1,15 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Agrimo Infra LTD. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.station-main-area {
+    position: relative;
+    background-color: var(--station-background-color);
+    transition: 0.5s;
+}
+
+.station-main-area > .station-content-wrapper{
+    width: inherit;
+    height: inherit;
+}

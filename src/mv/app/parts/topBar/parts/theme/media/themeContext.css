@@ -1,0 +1,21 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Agrimo Infra LTD. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+ .theme-context-control {
+    width: 50px;
+    height: var(--top-bar-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.theme-context-control > div {
+    color: var(--on-primary-theme-color);
+}
+
+
+

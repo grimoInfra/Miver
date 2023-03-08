@@ -1,0 +1,62 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Agrimo Infra LTD. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.snack-bar-controls {
+    z-index: 1000;
+    position: absolute;
+    bottom: 12px;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.snack-bar-controls>.snack-main-wrapper {
+    width: fit-content;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 0 8px 2px var(--primay-shadow-color);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: var(--snack-background-color);
+    transition: .5s;
+}
+
+.snack-bar-controls>.snack-main-wrapper>.snack-control {
+    width: 50px;
+    height: 50px;
+    background-color:var(--secondary-theme-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px 0px 10px;
+    user-select: none;
+    cursor: pointer;
+    transition: .5s;
+    border:2px solid var(--secondary-theme-color);
+}
+
+
+.snack-bar-controls>.snack-main-wrapper>.snack-control > div {
+    color: #ffffffea;
+}
+
+.snack-bar-controls>.snack-main-wrapper:hover{
+    transform: scale(1.2);
+}
+.snack-bar-controls>.snack-main-wrapper>.snack-control:hover{
+    transform: scale(1.1);
+    border-top-color: var(--station-background-color);
+    border-bottom-color: var(--station-background-color);
+
+}
+.snack-bar-controls>.snack-main-wrapper>.snack-control:active{
+    transform: scaleY(0.9)
+}
