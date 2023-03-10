@@ -4,7 +4,6 @@
  *--------------------------------------------------------------------------------------------*/
 
 import "./media/static.css"
-import "./media/symbols.css"
 import * as Dom from "mv/base/browser/dom";
 import { Injector } from "mv/base/node/decorators/injector";
 import { ServiceCollection } from "mv/base/node/decorators/serviceCollectionManager";
@@ -18,6 +17,15 @@ import { AdContentdata } from "mv/strings/ad.data";
 import { IAd } from "mv/platform/services/adService/adService";
 import { IDragAndDrop, DragManager } from "mv/platform/services/dragDropService/dragDropService";
 import { IWindowResizer, IWindowResizerService, WindowResizer, IWindowProps } from "mv/platform/windowResizer";
+
+/**
+ * Only add this file for development purposes and keep 
+ * at prodution we use the google-fonts-link for
+ * Montseratt font-family
+ * material-icons
+ */
+
+// import "./media/symbols.css"
 
 
 export class MvAppMain {
