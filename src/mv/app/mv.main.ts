@@ -2,6 +2,8 @@
  *  Copyright (c) Agrimo Infra LTD. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
+
+import "./media/static.css"
 import "./media/symbols.css"
 import * as Dom from "mv/base/browser/dom";
 import { Injector } from "mv/base/node/decorators/injector";
@@ -16,14 +18,6 @@ import { AdContentdata } from "mv/strings/ad.data";
 import { IAd } from "mv/platform/services/adService/adService";
 import { IDragAndDrop, DragManager } from "mv/platform/services/dragDropService/dragDropService";
 import { IWindowResizer, IWindowResizerService, WindowResizer, IWindowProps } from "mv/platform/windowResizer";
-
-function preloadIconsAsync() {
-    //@ts-ignore
-    import("./media/symbols.css")
-
-}
-
-preloadIconsAsync();
 
 
 export class MvAppMain {
