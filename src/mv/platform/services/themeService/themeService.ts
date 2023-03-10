@@ -156,7 +156,7 @@ export class Theme implements IThemeService {
 
     private setUpThemeLayout() {
         let mvThemeKey = this.getCurrentThemeKeyFromStorage()! as UITheme;
-        if (mvThemeKey) {
+        if (mvThemeKey && (mvThemeKey == "dark" || mvThemeKey == "light")) {
             this.theme = mvThemeKey
         } else {
             this.setUserDefaultTheme();
@@ -169,7 +169,7 @@ export class Theme implements IThemeService {
     }
 
     private setUserDefaultTheme() {
-        this.theme = "light"
+        this.theme = "dark"
     }
 
 
