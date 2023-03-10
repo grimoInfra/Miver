@@ -110,8 +110,6 @@ const webpackProductionConfig = {
 		publicPath: "/",
 		iife: true,
 		assetModuleFilename: "./style/resources/[name][ext]",
-		asyncChunks: true,
-		chunkLoadingGlobal: "mv",
 	},
 	optimization: {
 		minimizer: [new CssMinimizerPlugin()],
