@@ -4,15 +4,15 @@
  *--------------------------------------------------------------------------------------------*/
 
 @font-face {
-    font-family: 'symbols';
+    font-family: 'Material Symbols Outlined';
     font-style: normal;
     font-weight: 100 700;
     font-display: block;
     src: url("../../../../resources/fonts/materialSymbols/material-symbols-outlined.woff2") format('woff');
 }
  
-.symbols-icon {
-    font-family: "symbols";
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
     font-weight: normal;
     font-style: normal;
     font-size: 24px;

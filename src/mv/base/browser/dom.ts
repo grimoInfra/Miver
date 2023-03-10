@@ -276,7 +276,7 @@ export function createElementWithIcon<T extends keyof HTMLElementTagNameMap>(tag
     const _element  = document.createElement(tag);
 
     if(MaterialIcons[icon]){
-        _element.classList.add('symbols-icon');
+        _element.classList.add('material-symbols-outlined');
         _element.ariaLabel = "icon"
         _element.textContent = MaterialIcons[icon].glyphId;
     }

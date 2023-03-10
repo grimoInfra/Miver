@@ -2,7 +2,7 @@
  *  Copyright (c) Agrimo Infra LTD. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-
+import "./media/symbols.css"
 import * as Dom from "mv/base/browser/dom";
 import { Injector } from "mv/base/node/decorators/injector";
 import { ServiceCollection } from "mv/base/node/decorators/serviceCollectionManager";
@@ -16,8 +16,15 @@ import { AdContentdata } from "mv/strings/ad.data";
 import { IAd } from "mv/platform/services/adService/adService";
 import { IDragAndDrop, DragManager } from "mv/platform/services/dragDropService/dragDropService";
 import { IWindowResizer, IWindowResizerService, WindowResizer, IWindowProps } from "mv/platform/windowResizer";
-import "./media/static.css";
-import "./media/symbols.css"
+
+function preloadIconsAsync() {
+    //@ts-ignore
+    import("./media/symbols.css")
+
+}
+
+preloadIconsAsync();
+
 
 export class MvAppMain {
 
@@ -50,8 +57,23 @@ export class MvAppMain {
         Dom.appendElements([...parts], this.containerWrapper);
         Dom.appendToDom(this.containerWrapper, this.container);
         Dom.appendToDom(this.container, document.body);
+        this.clearSplashScreen()
 
     };
+
+    //available in production
+    private clearSplashScreen() {
+        try {
+            let splashHost = Dom.$('.mv-splash-container')! as HTMLDivElement;
+            splashHost.style.opacity = '0';
+            splashHost.style.display = 'none';
+        } catch (e) {
+
+            console.log(`[Splash-Error]:available in production Mode`)
+
+        }
+
+    }
 
     private registerApplicationEventsAndState() {
         if (this.windowResizer) {
