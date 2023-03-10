@@ -22,7 +22,6 @@ const webpackProductionConfig = {
 	target: "web",
 	entry: {
 		"mv.main": resolve("./src/.build.ts"),
-		cpr: resolve("./src/bootstrap/cpr.js"),
 	},
 	resolve: {
 		alias: {
@@ -58,27 +57,30 @@ const webpackProductionConfig = {
 			chunkFilename: "cl",
 		}),
 		new HtmlWebpackTagsPlugin({
-            tags: [
+            links: [
 				{
 					path: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined",
 					attributes: { rel: "stylesheet" },
-                    type : "css"
+					publicPath : false
 				},
 
 				{
 					path: "https://fonts.googleapis.com",
 					attributes: { rel: "preconnect" },
-                    type : "css"
+					publicPath : false
+
 				},
 				{
 					path: "https://fonts.gstatic.com",
 					attributes: { rel: "preconnect", crossorigin: "" },
-                    type : "css"
+					publicPath : false
+
 				},
 				{
 					path: "https://fonts.googleapis.com/css2?family=Montserrat&display=swap",
 					attributes: { rel: "stylesheet" },
-                    type : "css"
+					publicPath : false
+
 				},
 			],
 
