@@ -51,15 +51,17 @@ export class SnackBarContainer extends DisposeStore {
 
         //event-listeners
         this._register(Dom.addDisposableEventListener(this.linkButtonWrapper, Dom.EVENT_TYPES.CLICK, () => {
+            //use to invoke the magnetic-link and urltotorrent-file
+            
             
         }));
 
         this._register(Dom.addDisposableEventListener(this.addButtonWrapper, Dom.EVENT_TYPES.CLICK, () => {
-            
+            //used to invoke the add file facility
         }));
 
         this._register(Dom.addDisposableEventListener(this.moreButtonWrapper, Dom.EVENT_TYPES.CLICK, () => {
-            
+            //used to invoke a dialog box;
         }));
 
 
